@@ -2,9 +2,7 @@ package algorithms;
 
 import metrics.PerformanceTracker;
 
-/**
- * Insertion Sort implementation with optimization for nearly-sorted arrays.
- */
+
 public class InsertionSort {
 
     private final PerformanceTracker tracker = new PerformanceTracker();
@@ -20,7 +18,6 @@ public class InsertionSort {
             int key = array[i];
             int j = i - 1;
 
-            // Optimization: if already in order, skip inner loop
             if (array[j] <= key) {
                 tracker.incrementComparisons();
                 continue;
